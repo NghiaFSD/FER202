@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #222;
+  background: white;
+}
+
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+span, h2 {
+  color: blue;
+}
+
+.react-symbol {
+  color: #1abbd7;
+  font-size: 100px;
+}
+
+nav {
+  background: #555;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  margin-right: 18px;
+}
+
+.company {
+  border: 1px solid #aaa;
+  margin: 8px 0;
+  padding: 8px;
+}
+
+.company p {
+  margin: 3px 0;
+}
+
+button {
+  padding: 7px 12px;
+  cursor: pointer;
+}
