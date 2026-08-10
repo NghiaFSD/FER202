@@ -1,0 +1,14 @@
+# Bỏ qua node_modules ở mọi thư mục
+node_modules/
+**/node_modules/
+
+# Thư mục build
+build/
+**/build/
+
+# File môi trường
+.env
+.env.local
+
+# File log
+npm-debug.log*
