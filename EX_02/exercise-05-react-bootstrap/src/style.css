@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.demo-cell {
+  min-height: 54px;
+  padding: 12px;
+  background: #d3d3d3;
+  border: 1px solid #777;
+}
+
+.simple-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  margin: 12px;
+  color: white;
+  font-size: 68px;
+  font-weight: bold;
+  border-radius: 18px;
+}
+
+.html-logo {
+  background: #f0522b;
+}
+
+.css-logo {
+  background: #2965f1;
+}
+
+.bootstrap-logo {
+  background: #7952b3;
+}
+
+.fpt-logo {
+  display: inline-block;
+  padding: 24px 36px;
+  background: white;
+  color: #ef7d00;
+  font-size: 30px;
+  font-weight: bold;
+  border: 1px solid #eee;
+}
+
+.avatar-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 210px;
+  background: #e9ecef;
+  font-size: 92px;
+}
+
+.search-box {
+  max-width: 260px;
+}

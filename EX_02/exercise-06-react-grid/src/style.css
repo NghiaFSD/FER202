@@ -1,0 +1,13 @@
+.hero-placeholder {
+  min-height: 310px;
+  background: #cccccc;
+}
+
+.product-image {
+  min-height: 220px;
+  background: #d8d8d8;
+}
+
+.search-input {
+  max-width: 240px;
+}
