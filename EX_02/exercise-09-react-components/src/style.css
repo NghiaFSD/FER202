@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+}
+
+.exercise-section {
+  padding: 20px;
+  margin-bottom: 24px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.simple-card {
+  display: flex;
+  max-width: 520px;
+  border: 2px solid #6f42c1;
+}
+
+.simple-card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  min-height: 110px;
+  color: #8a6d00;
+  background: #fff3cd;
+  font-size: 30px;
+  border-right: 1px solid #6f42c1;
+}
+
+.simple-card-content {
+  flex: 1;
+}
+
+.simple-card-title,
+.simple-card-description {
+  margin: 0;
+  padding: 10px 14px;
+}
+
+.simple-card-title {
+  color: #fd7e14;
+  border-bottom: 1px solid #6f42c1;
+}
+
+.website-header {
+  padding: 24px;
+  color: white;
+  background: #f29122;
+  text-align: center;
+}
+
+.website-logo {
+  display: inline-block;
+  padding: 18px 28px;
+  color: #ef7d00;
+  background: white;
+  font-weight: bold;
+}
+
+.website-content {
+  padding: 30px;
+  text-align: center;
+}
+
+.website-footer {
+  padding: 16px;
+  background: #f8ce80;
+  text-align: center;
+}
