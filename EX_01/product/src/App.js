@@ -1,9 +1,6 @@
-const products = [
-  { id: 1, name: "Laptop ASUS", inputPrice: 15000, outPrice: 18500, stock: 5 },
-  { id: 2, name: "Chuột", inputPrice: 300, outPrice: 450, stock: 0 },
-  { id: 3, name: "Bàn phím", inputPrice: 800, outPrice: 1200, stock: 10 },
-  { id: 4, name: "Màn hình Dell", inputPrice: 3500, outPrice: 4200, stock: 2 }
-];
+import { Container, Table } from 'react-bootstrap';
+import { products } from './data';
+import UserProduct from './UserProduct';
 
 function App() {
   const highestPriceProduct = products.reduce((max, product) =>
@@ -17,53 +14,77 @@ function App() {
   const productsByProfit = [...products].sort((a, b) => {
     const profitA = a.outPrice - a.inputPrice;
     const profitB = b.outPrice - b.inputPrice;
+
     return profitB - profitA;
   });
 
   return (
-    <main>
-      <h1>Quản lý sản phẩm</h1>
+    <Container className="py-4">
+      <h1 className="text-center mb-4">Product Management</h1>
 
-      <h2>1. Danh sách sản phẩm và trạng thái</h2>
-      <table>
-        <thead>
+      <h2 className="mb-3">1. Product List and Status</h2>
+
+      <Table striped bordered hover responsive className="text-center align-middle">
+        <thead className="table-dark">
           <tr>
             <th>ID</th>
-            <th>Tên</th>
-            <th>Giá nhập</th>
-            <th>Giá bán</th>
-            <th>Tồn kho</th>
-            <th>Trạng thái</th>
+            <th>Name</th>
+            <th>Input Price</th>
+            <th>Output Price</th>
+            <th>Stock</th>
+            <th>Profit</th>
+            <th>Status</th>
           </tr>
         </thead>
+
         <tbody>
           {products.map((product) => (
+            <UserProduct
+              key={product.id}
+              product={product}
+            />
+          ))}
+        </tbody>
+      </Table>
+
+      <h2 className="mt-5">
+        2. Products with the Highest and Lowest Selling Prices
+      </h2>
+
+      <p>
+        <strong>Highest:</strong> {highestPriceProduct.name} –{' '}
+        {highestPriceProduct.outPrice}
+      </p>
+
+      <p>
+        <strong>Lowest:</strong> {lowestPriceProduct.name} –{' '}
+        {lowestPriceProduct.outPrice}
+      </p>
+
+      <h2 className="mt-5">3. Sort by Profit (Descending)</h2>
+
+      <p>Profit = Output Price - Input Price</p>
+
+      <Table striped bordered hover responsive>
+        <thead className="table-primary">
+          <tr>
+            <th>Rank</th>
+            <th>Product</th>
+            <th>Profit</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {productsByProfit.map((product, index) => (
             <tr key={product.id}>
-              <td>{product.id}</td>
+              <td>{index + 1}</td>
               <td>{product.name}</td>
-              <td>{product.inputPrice}</td>
-              <td>{product.outPrice}</td>
-              <td>{product.stock}</td>
-              <td>{product.stock > 0 ? "Còn hàng" : "Hết hàng"}</td>
+              <td>{product.outPrice - product.inputPrice}</td>
             </tr>
           ))}
         </tbody>
-      </table>
-
-      <h2>2. Sản phẩm có giá bán lớn nhất và nhỏ nhất</h2>
-      <p>Lớn nhất: {highestPriceProduct.name} - {highestPriceProduct.outPrice}</p>
-      <p>Nhỏ nhất: {lowestPriceProduct.name} - {lowestPriceProduct.outPrice}</p>
-
-      <h2>3. Sắp xếp theo lợi nhuận giảm dần</h2>
-      <p>Công thức: Lợi nhuận = Giá bán - Giá nhập</p>
-      <ol>
-        {productsByProfit.map((product) => (
-          <li key={product.id}>
-            {product.name}: {product.outPrice - product.inputPrice}
-          </li>
-        ))}
-      </ol>
-    </main>
+      </Table>
+    </Container>
   );
 }
 
