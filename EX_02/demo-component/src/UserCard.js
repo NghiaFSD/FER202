@@ -18,9 +18,9 @@ function UserCard({ user }) {
       <Card.Body>
         <div className="text-center">
           <Card.Title>{user.name}</Card.Title>
-          <Card.Text>{user.age}</Card.Text>
+          <Card.Text className="text-muted">{user.age}</Card.Text>
           <br/>
-          <Card.Text>{user.email}</Card.Text>
+          <Card.Text className="text-muted">{user.email}</Card.Text>
           <Button variant="success">Like</Button>
         </div>
       </Card.Body>

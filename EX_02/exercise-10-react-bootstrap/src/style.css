@@ -1,0 +1,175 @@
+:root {
+  --page-bg: #323232;
+  --navbar-bg: #2a2a2a;
+  --text-light: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--text-light);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.pizza-page {
+  min-height: 100vh;
+  padding-bottom: 4rem;
+  background: var(--page-bg);
+}
+
+.pizza-navbar {
+  min-height: 72px;
+  background: var(--navbar-bg);
+}
+
+.brand-title,
+.pizza-carousel h1,
+.menu-section h2,
+.reservation-section h2,
+.menu-card .card-title {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.brand-title {
+  font-size: 1.65rem;
+  font-weight: 700;
+}
+
+.pizza-navbar .nav-link {
+  margin-right: 1.1rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.pizza-navbar .nav-link:hover,
+.pizza-navbar .nav-link:focus {
+  color: #fff;
+}
+
+.search-form {
+  width: min(100%, 360px);
+}
+
+.search-form .form-control {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.search-form .btn {
+  min-width: 52px;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.pizza-carousel,
+.pizza-carousel .carousel-item {
+  background: #1d1d1d;
+}
+
+.carousel-image {
+  height: clamp(310px, 42vw, 530px);
+  object-fit: cover;
+}
+
+.pizza-carousel .carousel-caption {
+  right: 12%;
+  bottom: 12%;
+  left: 12%;
+  text-shadow: 0 2px 7px rgba(0, 0, 0, 0.9);
+}
+
+.pizza-carousel .carousel-caption h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.pizza-carousel .carousel-caption p {
+  font-size: clamp(0.95rem, 2vw, 1.3rem);
+}
+
+.menu-section,
+.reservation-section {
+  padding-top: 3rem;
+  scroll-margin-top: 85px;
+}
+
+.menu-section h2,
+.reservation-section h2 {
+  margin-bottom: 1.25rem;
+  font-size: 2.15rem;
+}
+
+.menu-card {
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  color: #222;
+}
+
+.menu-image-wrap {
+  position: relative;
+}
+
+.menu-card .card-img-top {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.menu-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  min-width: 72px;
+  border-radius: 0;
+  font-weight: 800;
+}
+
+.old-price {
+  margin-right: 0.5rem;
+  color: #777;
+  text-decoration: line-through;
+}
+
+.current-price {
+  color: #d26a00;
+  font-weight: 700;
+}
+
+.reservation-section h2 {
+  font-size: 2.25rem;
+}
+
+.reservation-section .form-control,
+.reservation-section .form-select {
+  border-radius: 0.2rem;
+}
+
+.send-button {
+  min-width: 175px;
+  font-weight: 600;
+}
+
+@media (max-width: 991.98px) {
+  .pizza-navbar .navbar-collapse {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .search-form {
+    margin-top: 0.65rem;
+    margin-bottom: 0.4rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .pizza-carousel .carousel-caption p {
+    display: none;
+  }
+}
