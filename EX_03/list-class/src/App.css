@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Toàn bộ trang */
+.App {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.light-mode {
+  color: #222;
+  background-color: #f8f8f8;
+}
+
+.dark-mode {
+  color: white;
+  background-color: #1c1c1c;
+}
+
+/* Header */
+.page-header,
+.table-container {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.page-header h2 {
+  margin: 0;
+}
+
+.page-header button {
+  padding: 10px;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+  color: inherit;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Cho phép cuộn bảng trên màn hình nhỏ */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Bảng */
+.class-table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+  color: #222;
+  background-color: white;
+}
+
+.class-table th,
+.class-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.class-table th {
+  color: white;
+  background-color: #84360e;
+}
+
+/* Trạng thái */
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.status-badge.open {
+  color: #087443;
+  background-color: #d9f8e8;
+}
+
+.status-badge.closed {
+  color: #a3232d;
+  background-color: #f9dfe2;
+}
+
+/* Các nút trong bảng */
+.action-cell button {
+  padding: 7px 11px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.action-cell .remove-button {
+  margin-right: 6px;
+  background-color: #dc2626;
+}
+
+.action-cell .edit-button {
+  background-color: #1670db;
+}
+
+.action-cell button:hover {
+  opacity: 0.8;
+}
+
+/* Bảng ở chế độ tối */
+.dark-mode .class-table {
+  color: white;
+  background-color: #292929;
+}
+
+.dark-mode .class-table td {
+  border-bottom-color: #464646;
+}
