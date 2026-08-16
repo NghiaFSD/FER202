@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="Illustration of Vadonut">
+  <defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#eee8ff"/><stop offset="1" stop-color="#d6c9ff"/></linearGradient></defs>
+  <rect width="480" height="300" rx="28" fill="url(#bg)"/>
+  <ellipse cx="240" cy="218" rx="133" ry="30" fill="#66519f" opacity=".18"/>
+  <g transform="rotate(-8 240 145)"><circle cx="240" cy="145" r="100" fill="#bc6c32" stroke="#81431d" stroke-width="9"/><circle cx="240" cy="145" r="37" fill="#e8dcff" stroke="#81431d" stroke-width="8"/><path d="M170 83c42-33 96-27 136 8" fill="none" stroke="#e6a24d" stroke-width="14" stroke-linecap="round"/><g fill="#f6d365"><circle cx="168" cy="145" r="5"/><circle cx="210" cy="81" r="5"/><circle cx="303" cy="115" r="5"/><circle cx="277" cy="201" r="5"/><circle cx="192" cy="196" r="5"/></g></g>
+</svg>
+
